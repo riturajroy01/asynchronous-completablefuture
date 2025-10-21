@@ -1,4 +1,4 @@
-package com.asynchronous.completablefuture.service;
+package com.asynchronous.completablefuture.service.FullReactiveImpl;
 
 import com.asynchronous.completablefuture.domain.dtos.Order;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;

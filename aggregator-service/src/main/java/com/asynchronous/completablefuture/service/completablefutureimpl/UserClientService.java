@@ -1,4 +1,4 @@
-package com.asynchronous.completablefuture.service;
+package com.asynchronous.completablefuture.service.completablefutureimpl;
 
 
 
@@ -36,7 +36,7 @@ public class UserClientService {
         );
     }
 
-    private CompletableFuture<User> fallbackUser(Long userId, Throwable ex) {
+    private CompletableFuture<User> fallbackUser(Integer userId, Throwable ex) {
         System.err.println("User service failed: " + ex.getMessage());
         User fallback = new User();
         fallback.setId(userId);

@@ -1,8 +1,10 @@
-package com.asynchronous.completablefuture.service;
+package com.asynchronous.completablefuture.service.FullReactiveImpl;
 
 import com.asynchronous.completablefuture.domain.dtos.Order;
 import com.asynchronous.completablefuture.domain.dtos.User;
 import com.asynchronous.completablefuture.domain.dtos.UserOrderResponse;
+import com.asynchronous.completablefuture.service.ReactiveOrderClientService;
+import com.asynchronous.completablefuture.service.ReactiveUserClientService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

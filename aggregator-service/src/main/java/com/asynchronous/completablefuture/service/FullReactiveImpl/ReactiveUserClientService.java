@@ -1,4 +1,4 @@
-package com.asynchronous.completablefuture.service;
+package com.asynchronous.completablefuture.service.FullReactiveImpl;
 
 import com.asynchronous.completablefuture.domain.dtos.User;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -29,7 +29,7 @@ public class ReactiveUserClientService {
     }
 
     // Fallback must match parameters + Throwable at end
-    private Mono<User> fallbackUser(Long userId, Throwable ex) {
+    private Mono<User> fallbackUser(Integer userId, Throwable ex) {
         // log the error, return graceful fallback mono
         System.err.println("User service fallback: " + ex.toString());
         User fallback = new User();
