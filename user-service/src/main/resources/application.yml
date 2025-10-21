@@ -1,0 +1,13 @@
+server:
+  port: 8086
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+spring:
+  application:
+    name: user-service
