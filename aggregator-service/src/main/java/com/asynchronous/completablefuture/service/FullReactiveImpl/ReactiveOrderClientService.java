@@ -3,7 +3,6 @@ package com.asynchronous.completablefuture.service.FullReactiveImpl;
 import com.asynchronous.completablefuture.domain.dtos.Order;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -29,7 +28,7 @@ public class ReactiveOrderClientService {
                 .timeout(Duration.ofSeconds(2)); // reactive timeout
     }
 
-    private Mono<List<Order>> fallbackOrders(Long userId, Throwable ex) {
+    private Mono<List<Order>> fallbackOrders(Integer userId, Throwable ex) {
         System.err.println("Order service fallback: " + ex.toString());
         return Mono.just(List.of()); // empty list as fallback
     }

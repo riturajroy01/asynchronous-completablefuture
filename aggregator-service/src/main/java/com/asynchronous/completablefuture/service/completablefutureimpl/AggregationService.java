@@ -3,7 +3,6 @@ package com.asynchronous.completablefuture.service.completablefutureimpl;
 import com.asynchronous.completablefuture.domain.dtos.Order;
 import com.asynchronous.completablefuture.domain.dtos.User;
 import com.asynchronous.completablefuture.domain.dtos.UserOrderResponse;
-import com.asynchronous.completablefuture.service.OrderClientService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.asynchronous.completablefuture.service;
+package com.asynchronous.completablefuture.service.completablefutureimpl;
 
 import com.asynchronous.completablefuture.domain.dtos.Order;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -35,7 +35,7 @@ public class OrderClientService {
         );
     }
 
-    private CompletableFuture<List<Order>> fallbackOrders(Long userId, Throwable ex) {
+    private CompletableFuture<List<Order>> fallbackOrders(Integer userId, Throwable ex) {
         System.err.println("Order service failed: " + ex.getMessage());
         return CompletableFuture.completedFuture(List.of());
     }
