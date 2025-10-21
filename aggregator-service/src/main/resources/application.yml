@@ -1,0 +1,44 @@
+server:
+  port: 8085
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+spring:
+  application:
+    name: completablefuture-service
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      userServiceCB:
+        sliding-window-size: 5
+        minimum-number-of-calls: 3
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 2
+      orderServiceCB:
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+
+  timelimiter:
+    instances:
+      userServiceTL:
+        timeout-duration: 2s
+      orderServiceTL:
+        timeout-duration: 2s
+
+  retry:
+    instances:
+      userServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
+      orderServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
