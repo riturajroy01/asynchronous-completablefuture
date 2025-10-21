@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.asynchronous</groupId>
-	<artifactId>completablefuture</artifactId>
+	<artifactId>aggregator-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>completablefuture</name>
 	<description>Demo project for Spring Boot asynchronous completablefuture</description>
